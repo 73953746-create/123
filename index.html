@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografía de Ingeniería de Software</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Estilos generales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Encabezado */
+        .header {
+            text-align: center;
+            padding: 30px 20px;
+            background: linear-gradient(120deg, #2c3e50, #4a69bd);
+            color: white;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* Grid principal */
+        .infographic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        
+        /* Tarjetas */
+        .card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card-header {
+            padding: 20px;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .card-content {
+            padding: 20px;
+        }
+        
+        .card h3 {
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+        
+        .card ul {
+            list-style-type: none;
+            margin-left: 10px;
+        }
+        
+        .card li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .card li:before {
+            content: "•";
+            color: #4a69bd;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        /* Colores para las tarjetas */
+        .card:nth-child(1) .card-header { background: #e74c3c; }
+        .card:nth-child(2) .card-header { background: #2ecc71; }
+        .card:nth-child(3) .card-header { background: #3498db; }
+        .card:nth-child(4) .card-header { background: #9b59b6; }
+        .card:nth-child(5) .card-header { background: #f39c12; }
+        .card:nth-child(6) .card-header { background: #1abc9c; }
+        .card:nth-child(7) .card-header { background: #d35400; }
+        .card:nth-child(8) .card-header { background: #27ae60; }
+        
+        /* Sección de proceso */
+        .process-section {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .process-section h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #2c3e50;
+        }
+        
+        .process-steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .process-step {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+            padding: 20px;
+            border-radius: 8px;
+            background: #f8f9fa;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .process-step i {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #4a69bd;
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #2c3e50;
+            color: white;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .infographic-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .process-steps {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Ingeniería de Software: Conceptos Fundamentales</h1>
+            <p>Una infografía completa sobre los principios, procesos y prácticas esenciales en el desarrollo de software</p>
+        </div>
+        
+        <div class="infographic-grid">
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-code"></i>
+                    <h2>¿Qué es la Ingeniería de Software?</h2>
+                </div>
+                <div class="card-content">
+                    <p>Disciplina de la ingeniería que abarca todos los aspectos de la producción de software, desde la especificación hasta el mantenimiento.</p>
+                    <p><strong>Importancia:</strong> La sociedad depende cada vez más de sistemas de software avanzados. Es más económico aplicar métodos de ingeniería para asegurar confiabilidad y mantenimiento.</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-sync-alt"></i>
+                    <h2>Ciclo de Vida del Software</h2>
+                </div>
+                <div class="card-content">
+                    <ul>
+                        <li><strong>Especificación:</strong> Definir qué debe hacer el sistema y sus restricciones</li>
+                        <li><strong>Desarrollo:</strong> Convertir especificaciones en un sistema ejecutable</li>
+                        <li><strong>Validación:</strong> Verificar que el sistema cumple con su especificación</li>
+                        <li><strong>Evolución:</strong> Modificar el software para requisitos cambiantes</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-cogs"></i>
+                    <h2>Construcción de Software</h2>
+                </div>
+                <div class="card-content">
+                    <p>Creación detallada del software mediante codificación, verificación, pruebas y depuración.</p>
+                    <ul>
+                        <li>Transforma el diseño en código funcional</li>
+                        <li>Varía según el modelo de ciclo de vida</li>
+                        <li>Requiere atención al detalle y colaboración</li>
+                        <li>Busca código eficiente, legible y escalable</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-exchange-alt"></i>
+                    <h2>Gestión de Cambios</h2>
+                </div>
+                <div class="card-content">
+                    <ul>
+                        <li><strong>Gestión de versiones:</strong> Seguimiento de versiones con control de versiones</li>
+                        <li><strong>Armado del sistema:</strong> Ensamblar componentes y compilar</li>
+                        <li><strong>Gestión de cambios:</strong> Evaluar costo e impacto de cambios</li>
+                        <li><strong>Gestión de liberación:</strong> Preparar software para distribución</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-clipboard-list"></i>
+                    <h2>Requisitos</h2>
+                </div>
+                <div class="card-content">
+                    <p><strong>Funcionales:</strong> Servicios o funcionalidades que el sistema debe proporcionar</p>
+                    <p><strong>No funcionales:</strong> Restricciones sobre los servicios o propiedades del sistema</p>
+                    <p>Su claridad es crucial para el éxito del proyecto. Los no funcionales suelen ser más críticos.</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-puzzle-piece"></i>
+                    <h2>Patrones de Diseño</h2>
+                </div>
+                <div class="card-content">
+                    <ul>
+                        <li><strong>Creacionales:</strong> Facilitan la creación de objetos (Abstract Factory, Singleton)</li>
+                        <li><strong>Estructurales:</strong> Definen relaciones entre clases y objetos (Adapter)</li>
+                        <li><strong>Comportamiento:</strong> Gestionan interacciones entre objetos (Observer, Decorator)</li>
+                    </ul>
+                    <p>Son soluciones probadas para problemas típicos en desarrollo orientado a objetos.</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-drafting-compass"></i>
+                    <h2>Diseño de Software</h2>
+                </div>
+                <div class="card-content">
+                    <ul>
+                        <li><strong>Diseño del Sistema:</strong> Transforma requisitos de negocio en requisitos del sistema</li>
+                        <li><strong>Diseño Arquitectónico:</strong> Enfocado en la estructura de alto nivel del software</li>
+                        <li><strong>Diseño Detallado:</strong> Especifica cada componente con detalle para su construcción</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-tasks"></i>
+                    <h2>Metodologías</h2>
+                </div>
+                <div class="card-content">
+                    <p><strong>Orientadas a Planes:</strong> Planificación detallada por adelantado (ej. Modelo en Cascada)</p>
+                    <p><strong>Ágiles:</strong> Planificación incremental y adaptativa (ej. Scrum)</p>
+                    <p>La mayoría de proyectos combinan elementos de ambos enfoques según sus necesidades.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="process-section">
+            <h2>Proceso de Desarrollo de Infografías</h2>
+            <div class="process-steps">
+                <div class="process-step">
+                    <i class="fas fa-bullseye"></i>
+                    <h3>Definir Objetivo</h3>
+                    <p>Establecer propósito y público objetivo</p>
+                </div>
+                
+                <div class="process-step">
+                    <i class="fas fa-search"></i>
+                    <h3>Investigar</h3>
+                    <p>Recopilar datos y información relevante</p>
+                </div>
+                
+                <div class="process-step">
+                    <i class="fas fa-pencil-alt"></i>
+                    <h3>Organizar</h3>
+                    <p>Seleccionar información esencial y crear guion</p>
+                </div>
+                
+                <div class="process-step">
+                    <i class="fas fa-paint-brush"></i>
+                    <h3>Diseñar</h3>
+                    <p>Crear diseño visual atractivo y coherente</p>
+                </div>
+                
+                <div class="process-step">
+                    <i class="fas fa-share-alt"></i>
+                    <h3>Compartir</h3>
+                    <p>Publicar y distribuir la infografía</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Infografía basada en el documento "Los textos proporcionados ofrecen una visión completa de la ingeniería de software"</p>
+            <p>© 2023 - Infografía de Ingeniería de Software</p>
+        </div>
+    </div>
+</body>
+</html>
